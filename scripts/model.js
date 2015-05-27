@@ -1,7 +1,8 @@
 //IIFE Immediately Invoked Function Expression)(http://stackoverflow.com/questions/8228281/what-is-the-function-construct-in-javascript)
 //Other references: http://adripofjavascript.com/blog/drips/understanding-the-module-pattern-in-javascript.html
 //http://stackoverflow.com/questions/966225/how-can-i-create-a-two-dimensional-array-in-javascript
-//
+//http://benalman.com/news/2010/11/immediately-invoked-function-expression/
+//http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html
 
 //Example:
 // var val = (function(){
