@@ -1,5 +1,7 @@
 //IIFE Immediately Invoked Function Expression)(http://stackoverflow.com/questions/8228281/what-is-the-function-construct-in-javascript)
-//-Other references: http://adripofjavascript.com/blog/drips/understanding-the-module-pattern-in-javascript.html
+//Other references: http://adripofjavascript.com/blog/drips/understanding-the-module-pattern-in-javascript.html
+//http://stackoverflow.com/questions/966225/how-can-i-create-a-two-dimensional-array-in-javascript
+//
 
 //Example:
 // var val = (function(){
@@ -12,4 +14,13 @@
 
 // alert(val(10)); //10
 // alert(val(11)); //21
+
+//Creating two dimensional arrays in JS:
+// Example: 
+// var items = [[1,2],[3,4],[5,6]];
+// alert(items[0][0]); // 1
+
+
+
+//IFEE to wrap the module:
 
