@@ -20,17 +20,23 @@
         <![endif]-->
 
   <style>
+    /*   Starting point from Thursday's lecture
+ */
+
     .container {
       border: 1px solid;
       width: 80%;
       margin: 0 auto;
       min-width: 1in;
       max-width: 3in;
-      max-width: 3in;
-      min-width: 1in;
     }
 
-    .chessboard {}
+    .chessboard {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    /* Row Styles */
 
     .chessboard .row {
       margin: 0;
@@ -39,16 +45,34 @@
       clear: both;
     }
 
+    .chessboard .row::before,
+    .chessboard .row::after {
+      font-size: 500%;
+      position: absolute;
+    }
+
+    .chessboard .row::before {
+      right: 100%;
+    }
+
+    .chessboard .row::after {
+      left: 100%;
+    }
+
     .chessboard .rank-2::before,
     .chessboard .rank-2::after {
       content: '2';
-      font-size: 100%;
-      position: absolute;
-      right: -20%;
     }
 
+    .chessboard .rank-1::before,
+    .chessboard .rank-1::after {
+      content: '1';
+    }
+    /* END Row Styles */
+
     .chessboard .square {
-      background-color: pink;
+      background-color: green;
+      display: block;
       width: 50%;
       padding-bottom: 50%;
       outline: 1px solid red;
@@ -59,21 +83,29 @@
       background-color: green;
     }
 
-    .chessboard .square:nth-child(odd) .square:nth-child(odd) {
-      background-color: lightgrey;
+    .chessboard .row:nth-child(even) .square:nth-child(odd) {
+      background-color: orange;
+    }
+
+    .chessboard .square:nth-child(even) {
+      background-color: orange;
     }
 
     .piece {}
 
-    .black {}
+    .white {}
 
     .rook {}
-      
+
+    .piece-white-rook {
+      /* What goes here? */
+    }
   </style>
   <div>
     <main class="container">
 
       <style>
+
       </style>
       <div class="chessboard">
         <ul class="row rank-2">
@@ -86,6 +118,7 @@
         <ul class="row rank-1">
           <li class="square file-a">&#x2656;</li>
           <li class="square file-b"></li>
+
         </ul>
         <!-- .row -->
       </div>
