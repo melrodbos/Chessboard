@@ -12,31 +12,37 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-</head>
 
-<body>
+
+
     <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-    <style>
-        /*   Starting point from Thursday's lecture:
- */
-/* Wrapper: 
-        .container {
-            border: 1px solid;
-            width: 80%;
-            margin: 0 auto;
-            min-width: 1in;
-            max-width: 3in;
-        }*/
 
-        .chessboard {
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
-            position: absolute;
-        }
+<!--         /*   Starting point from Thursday's lecture:
+ */
+/* Wrapper:
+.container {
+    border: 1px solid;
+    width: 80%;
+    margin: 0 auto;
+}*/
+
+/* For a visual representation of the chessboard:
+1. Create
+2. lets find what the board (.chessboard) and the pieces have in common.*/ -->
+<body>
+ <style>
+    .chessboard {
+            content: "\2657"
+            width: 640px; height: 640px;
+            max-width: 640px;
+            margin: 10px auto;
+            border: 1px solid black;
+
+/*             position: absolute;
+ */        }
         /* Row Styles */
 
         .chessboard .row {
@@ -48,8 +54,10 @@
 
         .chessboard .row::before,
         .chessboard .row::after {
-            font-size: 200%;
+            font-size: 500%;
             position: absolute;
+            margin: 10%;
+            padding: 50%;
         }
 
         .chessboard .row::before {
@@ -60,8 +68,8 @@
             left: 100%;
         }
 
-        .chessboard .rank-2::before,
-        .chessboard .rank-2::after {
+        .chessboard .rank-3::before,
+        .chessboard .rank-3::after {
             content: '3';
         }
 
@@ -77,7 +85,7 @@
         /* END Row Styles */
 
         .chessboard .square {
-            background-color: green;
+            background-color: #350A3D;
             display: block;
             width: 50%;
             padding-bottom: 50%;
@@ -89,73 +97,73 @@
         }
 
         .chessboard .row:nth-child(even) .square:nth-child(even) {
-            background-color: green;
+            background-color: #350A3D;
         }
 
         .chessboard .row:nth-child(even) .square:nth-child(odd) {
-            background-color: orange;
+            background-color: #B9B1BA;
         }
 
-        .chessboard .square:nth-child(even) {
-            background-color: orange;
+    /*     .chessboard .square:nth-child(even) {
+        background-color: #B9B1BA;
+    }
+     */
+        .piece-white {
+
         }
 
-        .piece {}
-
-        .white {}
-
-        .rook {}
-
-        .piece-white-rook {
-            /* What goes here? */
+        .piece-black {
+          
         }
+
+
     </style>
+  </head>
     <div>
-        <main class="container">
-
-            <style>
-
+        <main class="chessboard">
+          <style>
             </style>
-              <div class="chessboard">
-                <ul class="row rank-3">
 
-
-
-                    <li class="square file-a">
-                    <li class="square file-b">
-                    <li class="square file-c">
-                    <li class="square file-d">
-                    <li class="square file-e">
-                    <li class="square file-f">
-                    <li class="square file-g">
-                    <li class="square file-h">
-                    </li>
-
-                <ul class="row rank-2">
-                    <li class="square file-a">
-                    <li class="square file-b">
-                    <li class="square file-c">
-                    <li class="square file-d">
-                    <li class="square file-e">
-                    <li class="square file-f">
-                    <li class="square file-g">
-                    <li class="square file-g">
-                    </li>
-                    <!-- single square -->
-<!--                     <li class="square file-b"></li>
- -->                </ul>
-                <!-- .row -->
-                <ul class="row rank-1">
-                    <li class="square file-a">&#x2656;</li>
-                    <li class="square file-b"></li>
-                    <li class="square file-c"></li>
-                    <li class="square file-d"></li>
-                    <li class="square file-e"></li>
-                    <li class="square file-f"></li>
-                    <li class="square file-g"></li>
-                    <li class="square file-h"></li>
-
-                </ul>
+                <div class="row rank-4">
+                    <div class="square file-a">&#9814;</div>
+                    <div class="square file-b"></div>
+                    <div class="square file-c"></div>
+                    <div class="square file-d"></div>
+                    <div class="square file-e"></div>
+                    <div class="square file-f"></div>
+                    <div class="square file-g"></div>
+                    <div class="square file-h"></div>
+                </div>
+                <div class="row rank-3">
+                    <div class="square file-a"></div>
+                    <div class="square file-b"></div>
+                    <div class="square file-c"></div>
+                    <div class="square file-d"></div>
+                    <div class="square file-e"></div>
+                    <div class="square file-f"></div>
+                    <div class="square file-g"></div>
+                    <div class="square file-h"></div>
+                </div>
+                <div class="row rank-2">
+                    <div class="square file-a"></div>
+                    <div class="square file-b"></div>
+                    <div class="square file-c"></div>
+                    <div class="square file-d"></div>
+                    <div class="square file-e"></div>
+                    <div class="square file-f"></div>
+                    <div class="square file-g"></div>
+                    <div class="square file-g"></div>
+                </div>
+                <div class="row rank-1">
+                    <div class="square file-a"></div>
+                    <div class="square file-b"></div>
+                    <div class="square file-c"></div>
+                    <div class="square file-d"></div>
+                    <div class="square file-e"></div>
+                    <div class="square file-f"></div>
+                    <div class="square file-g"></div>
+                    <div class="square file-h"></div>
+                </div>
                 <!-- .row -->
             </div>
             <!-- .chessboard -->
