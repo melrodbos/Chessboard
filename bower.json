@@ -12,5 +12,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "chai": "~2.3.0"
+  }
 }
