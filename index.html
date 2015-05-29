@@ -2,142 +2,166 @@
 <html class="no-js" lang="">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>TIY Chessboard: Kasparov vs Karpov (1984)</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>TIY Chessboard: Kasparov vs Karpov (1984)</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
-  <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
 <body>
-  <!--[if lt IE 8]>
+    <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-  <style>
-    /*   Starting point from Thursday's lecture
+    <style>
+        /*   Starting point from Thursday's lecture:
  */
+/* Wrapper: */
+        .container {
+            border: 1px solid;
+            width: 80%;
+            margin: 0 auto;
+            min-width: 1in;
+            max-width: 3in;
+        }
 
-    .container {
-      border: 1px solid;
-      width: 80%;
-      margin: 0 auto;
-      min-width: 1in;
-      max-width: 3in;
-    }
+        .chessboard {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            position: absolute;
+        }
+        /* Row Styles */
 
-    .chessboard {
-      width: 100%;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    /* Row Styles */
+        .chessboard .row {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            clear: both;
+        }
 
-    .chessboard .row {
-      margin: 0;
-      padding: 0;
-      position: relative;
-      clear: both;
-    }
+        .chessboard .row::before,
+        .chessboard .row::after {
+            font-size: 200%;
+            position: absolute;
+        }
 
-    .chessboard .row::before,
-    .chessboard .row::after {
-      font-size: 500%;
-      position: absolute;
-    }
+        .chessboard .row::before {
+            right: 100%;
+        }
 
-    .chessboard .row::before {
-      right: 100%;
-    }
+        .chessboard .row::after {
+            left: 100%;
+        }
 
-    .chessboard .row::after {
-      left: 100%;
-    }
+        .chessboard .rank-2::before,
+        .chessboard .rank-2::after {
+            content: '3';
+        }
 
-    .chessboard .rank-2::before,
-    .chessboard .rank-2::after {
-      content: '2';
-    }
+        .chessboard .rank-2::before,
+        .chessboard .rank-2::after {
+            content: '2';
+        }
 
-    .chessboard .rank-1::before,
-    .chessboard .rank-1::after {
-      content: '1';
-    }
-    /* END Row Styles */
+        .chessboard .rank-1::before,
+        .chessboard .rank-1::after {
+            content: '1';
+        }
+        /* END Row Styles */
 
-    .chessboard .square {
-      background-color: green;
-      display: block;
-      width: 50%;
-      padding-bottom: 50%;
-      outline: 1px solid red;
-      float: left;
-    }
+        .chessboard .square {
+            background-color: green;
+            display: block;
+            width: 50%;
+            padding-bottom: 50%;
+            outline: 1px solid red;
+            float: left;
+            font-size: 7ex;
+            text-align: center;
 
-    .chessboard .row:nth-child(even) .square:nth-child(even) {
-      background-color: green;
-    }
+        }
 
-    .chessboard .row:nth-child(even) .square:nth-child(odd) {
-      background-color: orange;
-    }
+        .chessboard .row:nth-child(even) .square:nth-child(even) {
+            background-color: green;
+        }
 
-    .chessboard .square:nth-child(even) {
-      background-color: orange;
-    }
+        .chessboard .row:nth-child(even) .square:nth-child(odd) {
+            background-color: orange;
+        }
 
-    .piece {}
+        .chessboard .square:nth-child(even) {
+            background-color: orange;
+        }
 
-    .white {}
+        .piece {}
 
-    .rook {}
+        .white {}
 
-    .piece-white-rook {
-      /* What goes here? */
-    }
-  </style>
-  <div>
-    <main class="container">
+        .rook {}
 
-      <style>
+        .piece-white-rook {
+            /* What goes here? */
+        }
+    </style>
+    <div>
+        <main class="container">
 
-      </style>
-      <div class="chessboard">
-        <ul class="row rank-2">
-          <li class="square file-a">
-            <li class="square file-b">
-              <li class="square file-c">
-                <li class="square file-d">
-                  <li class="square file-e">
+            <style>
+
+            </style>
+              <div class="chessboard">
+                <ul class="row rank-3">
+
+
+
+                    <li class="square file-a">
+                    <li class="square file-b">
+                    <li class="square file-c">
+                    <li class="square file-d">
+                    <li class="square file-e">
                     <li class="square file-f">
-                      <li class="square file-g">
-            <!-- single square -->
-          </li>
-          <li class="square file-b"></li>
-        </ul>
-        <!-- .row -->
-        <ul class="row rank-1">
-          <li class="square file-a">&#x2656;</li>
-          <li class="square file-b"></li>
-          <li class="square file-c"></li>
-          <li class="square file-d"></li>
-          <li class="square file-e"></li>
-          <li class="square file-f"></li>
-          <li class="square file-g"></li>
-          <li class="square file-h"></li>
+                    <li class="square file-g">
+                    <li class="square file-h">
+                    </li>
 
-        </ul>
-        <!-- .row -->
-      </div>
-      <!-- .chessboard -->
+                <ul class="row rank-2">
+                    <li class="square file-a">
+                    <li class="square file-b">
+                    <li class="square file-c">
+                    <li class="square file-d">
+                    <li class="square file-e">
+                    <li class="square file-f">
+                    <li class="square file-g">
+                    <li class="square file-g">
+                    </li>
+                    <!-- single square -->
+<!--                     <li class="square file-b"></li>
+ -->                </ul>
+                <!-- .row -->
+                <ul class="row rank-1">
+                    <li class="square file-a">&#x2656;</li>
+                    <li class="square file-b"></li>
+                    <li class="square file-c"></li>
+                    <li class="square file-d"></li>
+                    <li class="square file-e"></li>
+                    <li class="square file-f"></li>
+                    <li class="square file-g"></li>
+                    <li class="square file-h"></li>
 
-    </main>
-    <!-- .container -->
+                </ul>
+                <!-- .row -->
+            </div>
+            <!-- .chessboard -->
+
+        </main>
+        <!-- .container -->
 </body>
 
 </html>
