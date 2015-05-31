@@ -165,9 +165,21 @@
               padding-left: 13px;
             }
 
-                /* What goes here? */
+            /* @media queries! */
+            @media screen and (max-width: 768px) {
+              .container {
+              max-width: 600px;
+    		      font-size: 50%;
+        	    }
+              li.letters {
+                padding: 0 4.9%;
+              }
             }
-
+            @media screen and (max-width: 400px) {
+              .container {
+    		      font-size: 50%;
+        	    }
+            }
         </style>
         <div class="chessboard">
             <!-- Top Letters -->
