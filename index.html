@@ -13,35 +13,56 @@
     <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-<!-- Lets start from scratch: Code School based code...
+<!-- Lets start from scratch: Code School based code and from lecture...
  -->
     <style type="text/css">
     /* CSS HERE! */
+
+      body{
+        background: #EBDEDC;
+      }
       .chessboard {
-        width: 512px; height: 512px;
+
+        width: 512px; margin: 0 auto;
+        height: 512px: margin: 0 auto;
         outline: 1px solid turquoise;
-        display:block;
+        display:inline-block;
 
       }
-      .square-light {
+      .chessboard .square {
+
+      }
+      .chessboard .square-light {
         width: 64px; height: 64px;
         background-color: #BFABA6;
-        display:inline-block;
         float: left;
+        text-align: center;
       }
-      .square-dark {
+      .chessboard .square-dark {
         width: 64px; height: 64px;
         background-color: #3E8A86;
-        display: inline-block;
         float: left;
-      }
+        text-align: center;
 
+      }
+      .chessboard .row {
+        margin: 0; padding: 0;
+        position: relative;
+        clear: both;
+      }
     </style>
   </head>
     <body>
-      <div class="chessboard">
-        <div class="square-dark"></div>
-        <div class="square-light"></div>
+      <main class="container">
+        <div class="chessboard">
+          <div class="row-rank-1">A</div>
+          <div class="square-dark">&#9814;</div>
+        <!-- single square -->
+          <div class="row-rank-2"></div>
+          <div class="square-light">piece</div>
+
+        </div> <!-- .chessboard -->
+      </main>
     </body>
 </html>
 
