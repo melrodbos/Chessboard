@@ -1,23 +1,83 @@
 <!doctype html>
 <html class="no-js" lang="">
-
-<head>
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>TIY Chessboard: Kasparov vs Karpov (1984)</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 
-
-
     <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+<!-- Lets start from scratch: Code School based code...
+ -->
+    <style type="text/css">
+    /* CSS HERE! */
+      .chessboard {
+        width: 512px; height: 512px;
+        outline: 1px solid turquoise;
+        display:block;
+
+      }
+      .square-light {
+        width: 64px; height: 64px;
+        background-color: #BFABA6;
+        display:inline-block;
+        float: left;
+      }
+      .square-dark {
+        width: 64px; height: 64px;
+        background-color: #3E8A86;
+        display: inline-block;
+        float: left;
+      }
+
+    </style>
+  </head>
+    <body>
+      <div class="chessboard">
+        <div class="square-dark"></div>
+        <div class="square-light"></div>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!--         /*   Starting point from Thursday's lecture:
@@ -32,7 +92,7 @@
 /* For a visual representation of the chessboard:
 1. Create the board: squares, a grid?? Box Model !!!
 2. lets find what the board (.chessboard) and the pieces have in common.*/ -->
-<body>
+<!-- <body>
  <style>
     .chessboard {
       width: 160px; height: 160px;
@@ -91,12 +151,11 @@
                     <div class="square file-g"></div>
                     <div class="square file-h"></div>
                 </div>
-                <!-- .row -->
+                .row
             </div>
-            <!-- .chessboard -->
+            .chessboard
 
         </main>
-        <!-- .container -->
+        .container
 </body>
-
-</html>
+ -->
