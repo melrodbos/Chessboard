@@ -30,91 +30,18 @@
 }*/
 
 /* For a visual representation of the chessboard:
-1. Create
+1. Create the board: squares, a grid?? Box Model !!!
 2. lets find what the board (.chessboard) and the pieces have in common.*/ -->
 <body>
  <style>
     .chessboard {
-            content: "\2657"
-            width: 640px; height: 640px;
-            max-width: 640px;
-            margin: 10px auto;
-            border: 1px solid black;
+      width: 160px; height: 160px;
+      color: darkgrey;
+      margin:1px;
+      display:inline-block;
+      border-style: 1px solid grey;
 
-/*             position: absolute;
- */        }
-        /* Row Styles */
-
-        .chessboard .row {
-            margin: 0;
-            padding: 0;
-            position: relative;
-            clear: both;
-        }
-
-        .chessboard .row::before,
-        .chessboard .row::after {
-            font-size: 500%;
-            position: absolute;
-            margin: 10%;
-            padding: 50%;
-        }
-
-        .chessboard .row::before {
-            right: 100%;
-        }
-
-        .chessboard .row::after {
-            left: 100%;
-        }
-
-        .chessboard .rank-3::before,
-        .chessboard .rank-3::after {
-            content: '3';
-        }
-
-        .chessboard .rank-2::before,
-        .chessboard .rank-2::after {
-            content: '2';
-        }
-
-        .chessboard .rank-1::before,
-        .chessboard .rank-1::after {
-            content: '1';
-        }
-        /* END Row Styles */
-
-        .chessboard .square {
-            background-color: #350A3D;
-            display: block;
-            width: 50%;
-            padding-bottom: 50%;
-            outline: 1px solid red;
-            float: left;
-            font-size: 7ex;
-            text-align: center;
-
-        }
-
-        .chessboard .row:nth-child(even) .square:nth-child(even) {
-            background-color: #350A3D;
-        }
-
-        .chessboard .row:nth-child(even) .square:nth-child(odd) {
-            background-color: #B9B1BA;
-        }
-
-    /*     .chessboard .square:nth-child(even) {
-        background-color: #B9B1BA;
     }
-     */
-        .piece-white {
-
-        }
-
-        .piece-black {
-          
-        }
 
 
     </style>
@@ -125,7 +52,7 @@
             </style>
 
                 <div class="row rank-4">
-                    <div class="square file-a">&#9814;</div>
+                    <div class="square file-a"></div>
                     <div class="square file-b"></div>
                     <div class="square file-c"></div>
                     <div class="square file-d"></div>
