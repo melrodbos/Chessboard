@@ -1,6 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>TIY Chessboard: Kasparov vs Karpov (1984)</title>
@@ -13,84 +14,160 @@
     <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-<!-- Lets start from scratch: Code School based code and from lecture...
+    <!-- Lets start from scratch: Code School based code and from lecture...
  -->
-    <style type="text/css">
-    /* CSS HERE! */
+</head>
 
-      body{
-        background: #EBDEDC;
-      }
-      .chessboard {
+<body>
+    <main class="container">
+        <style type="text/css">
+            /* CSS HERE! */
 
-        width: 512px; margin: 0 auto;
-        height: 512px: margin: 0 auto;
-        outline: 1px solid turquoise;
-        display:inline-block;
+            body {
+                background: #EBDEDC;
+            }
 
-      }
-      .chessboard .square {
+            .container {
+                width: 100%;
+                margin: 0 auto;
+                min-width: 2in;
+                max-width: 4in;
+                position:relative;
+            }
 
-      }
-      .chessboard .square-light {
-        width: 64px; height: 64px;
-        background-color: #BFABA6;
-        float: left;
-        text-align: center;
-      }
-      .chessboard .square-dark {
-        width: 64px; height: 64px;
-        background-color: #3E8A86;
-        float: left;
-        text-align: center;
+            .chessboard {
+              margin-top: 20ex;
+            }
+            /* Chessboard square style */
+            .chessboard .square {
+                background-color: #BEDB39;
+                width: 25%;
+                padding-bottom: 25%;
+                outline: 1px solid turquoise;
+                float: left;
+                /* position: relative; */
+            }
 
-      }
-      .chessboard .row {
-        margin: 0; padding: 0;
-        position: relative;
-        clear: both;
-      }
-    </style>
-  </head>
-    <body>
-      <main class="container">
+            .chessboard .square > * {
+              position: absolute;
+            }
+
+  /*           .square span.piece {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -40px;
+    margin-top: -56px;
+    font-size: 5em;
+  }
+
+  span.piece .light{
+    color: #fff;
+  }
+
+  span.piece .dark{
+    color: #000;
+  }
+   */
+            .chessboard .row:nth-child(even) .square:nth-child(even) {
+                background-color: #BEDB39;
+            }
+
+            .chessboard .row:nth-child(even) .square:nth-child(odd) {
+                background-color: #1F8A70;
+            }
+
+            .chessboard .square:nth-child(even) {
+                background-color: #1F8A70;
+            }
+
+            /* Row Styles */
+
+            .chessboard .row {
+                margin: 0;
+                padding: 0;
+                position: relative;
+                clear: both;
+            }
+
+            .chessboard .row::before,
+            .chessboard .row::after {
+                font-size: 200%;
+                position: absolute;
+            }
+
+            .chessboard .row::before {
+                right: 100%;
+            }
+
+            .chessboard .row::after {
+                left: 100%;
+            }
+
+            .chessboard .rank-4::before,
+            .chessboard .rank-4::after {
+                content: '4';
+                position: absolute;
+            }
+
+            .chessboard .rank-3::before,
+            .chessboard .rank-3::after {
+                content: '3';
+            }
+            .chessboard .rank-2::before,
+            .chessboard .rank-2::after {
+                content: '2';
+            }
+
+            .chessboard .rank-1::before,
+            .chessboard .rank-1::after {
+                content: '1';
+            }
+            /* END Row Styles */
+
+
+            .piece {}
+
+            .white {}
+
+            .rook {}
+
+            .piece-white-rook {
+                /* What goes here? */
+            }
+        </style>
         <div class="chessboard">
-          <div class="row-rank-1">A</div>
-          <div class="square-dark">&#9814;</div>
-        <!-- single square -->
-          <div class="row-rank-2"></div>
-          <div class="square-light">piece</div>
+            <ul class="row rank-8">
+                <li class="square file-a"></li>
+                <li class="square file-b"></li>
+                <li class="square file-c"></li>
+                <li class="square file-d"></li>
+                <li class="square file-e"></li>
+                <li class="square file-f"></li>
+                <li class="square file-g"></li>
+                <li class="square file-h"></li>                    <!-- single square -->
+            </ul>
+            <!-- .row -->
+            <ul class="row rank-7">
+                <li class="square file-a"><span class="piece">&#x2656;</span></li>
+                <li class="square file-b"></li>
+                <li class="square file-c"></li>
+                <li class="square file-d"></li>
+                <li class="square file-e"></li>
+                <li class="square file-f"></li>
+                <li class="square file-g"></li>
+                <li class="square file-h"></li>
 
-        </div> <!-- .chessboard -->
-      </main>
-    </body>
+            </ul>
+            <!-- .row -->
+        </div>
+        <!-- .chessboard -->
+
+    </main>
+    <!-- .container -->
+</body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
