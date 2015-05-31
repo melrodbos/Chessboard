@@ -2,136 +2,94 @@
 <html class="no-js" lang="">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>TIY Chessboard: Kasparov vs Karpov (1984)</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>TIY Chessboard: Kasparov vs Karpov (1984)</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
-  <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-</head>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 
-<body>
-  <!--[if lt IE 8]>
+
+
+    <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-  <style>
-    /*   Starting point from Thursday's lecture
+
+<!--         /*   Starting point from Thursday's lecture:
  */
+/* Wrapper:
+.container {
+    border: 1px solid;
+    width: 80%;
+    margin: 0 auto;
+}*/
 
-    .container {
-      border: 1px solid;
-      width: 80%;
-      margin: 0 auto;
-      min-width: 1in;
-      max-width: 3in;
-    }
+/* For a visual representation of the chessboard:
+1. Create the board: squares, a grid?? Box Model !!!
+2. lets find what the board (.chessboard) and the pieces have in common.*/ -->
+<body>
+  <head>
+     <style>
 
-    .chessboard {
-      width: 100%;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    /* Row Styles */
-
-    .chessboard .row {
-      margin: 0;
-      padding: 0;
-      position: relative;
-      clear: both;
-    }
-
-    .chessboard .row::before,
-    .chessboard .row::after {
-      font-size: 500%;
-      position: absolute;
-    }
-
-    .chessboard .row::before {
-      right: 100%;
-    }
-
-    .chessboard .row::after {
-      left: 100%;
-    }
-
-    .chessboard .rank-2::before,
-    .chessboard .rank-2::after {
-      content: '2';
-    }
-
-    .chessboard .rank-1::before,
-    .chessboard .rank-1::after {
-      content: '1';
-    }
-    /* END Row Styles */
-
-    .chessboard .square {
-      background-color: green;
-      display: block;
-      width: 50%;
-      padding-bottom: 50%;
-      outline: 1px solid red;
-      float: left;
-    }
-
-    .chessboard .row:nth-child(even) .square:nth-child(even) {
-      background-color: green;
-    }
-
-    .chessboard .row:nth-child(even) .square:nth-child(odd) {
-      background-color: orange;
-    }
-
-    .chessboard .square:nth-child(even) {
-      background-color: orange;
-    }
-
-    .piece {}
-
-    .white {}
-
-    .rook {}
-
-    .piece-white-rook {
-      /* What goes here? */
-    }
-  </style>
-  <div>
-    <main class="container">
-
-      <style>
 
       </style>
-      <div class="chessboard">
-        <ul class="row rank-2">
-          <li class="square file-a">
-            <!-- single square -->
-          </li>
-          <li class="square file-b"></li>
-        </ul>
-        <!-- .row -->
-        <ul class="row rank-1">
-          <li class="square file-a">&#x2656;</li>
-          <li class="square file-b"></li>
-          <li class="square file-c"></li>
-          <li class="square file-d"></li>
-          <li class="square file-e"></li>
-          <li class="square file-f"></li>
-          <li class="square file-g"></li>
-          <li class="square file-h"></li>
+    </head>
+    <div>
+        <main class="chessboard">
+          <style>
+            </style>
 
-        </ul>
-        <!-- .row -->
-      </div>
-      <!-- .chessboard -->
+                <div class="row rank-4">
+                    <div class="square file-a"></div>
+                    <div class="square file-b"></div>
+                    <div class="square file-c"></div>
+                    <div class="square file-d"></div>
+                    <div class="square file-e"></div>
+                    <div class="square file-f"></div>
+                    <div class="square file-g"></div>
+                    <div class="square file-h"></div>
+                </div>
+                <div class="row rank-3">
+                    <div class="square file-a"></div>
+                    <div class="square file-b"></div>
+                    <div class="square file-c"></div>
+                    <div class="square file-d"></div>
+                    <div class="square file-e"></div>
+                    <div class="square file-f"></div>
+                    <div class="square file-g"></div>
+                    <div class="square file-h"></div>
+                </div>
+                <div class="row rank-2">
+                    <div class="square file-a"></div>
+                    <div class="square file-b"></div>
+                    <div class="square file-c"></div>
+                    <div class="square file-d"></div>
+                    <div class="square file-e"></div>
+                    <div class="square file-f"></div>
+                    <div class="square file-g"></div>
+                    <div class="square file-g"></div>
+                </div>
+                <div class="row rank-1">
+                    <div class="square file-a"></div>
+                    <div class="square file-b"></div>
+                    <div class="square file-c"></div>
+                    <div class="square file-d"></div>
+                    <div class="square file-e"></div>
+                    <div class="square file-f"></div>
+                    <div class="square file-g"></div>
+                    <div class="square file-h"></div>
+                </div>
+                <!-- .row -->
+            </div>
+            <!-- .chessboard -->
 
-    </main>
-    <!-- .container -->
+        </main>
+        <!-- .container -->
 </body>
 
 </html>
