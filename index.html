@@ -9,8 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-
     <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -44,6 +44,7 @@
 
             li.letters {
               display: inline-block;
+              font-family: "Lato" Arial sans-serif;
               font-size:250%;
               padding: 0 34px;
             }
@@ -109,6 +110,7 @@
             .chessboard .row::before,
             .chessboard .row::after {
                 font-size: 250%;
+                font-family: "Lato" Arial sans-serif;
                 position: absolute;
                 padding: 20px;
             }
@@ -163,6 +165,25 @@
             .piece {
               font-size: 4.5em;
               padding-left: 15px;
+            }
+
+            .buttons_wrap {
+              margin: 0 auto;
+              width: 215px;
+              padding-top: 20px;
+            }
+
+            button {
+              display: inline-block;
+              background-color: #BEDB39;
+              border: none;
+              border-radius: 5px;
+              padding: 7px;
+              font-size: 25px;
+            }
+
+            button:hover {
+              background-color: #96B01E;
             }
 
             /* @media queries! */
@@ -279,10 +300,17 @@
               <li class="letters">G</li>
               <li class="letters">H</li>
             </ul>
+            <div class="buttons_wrap">
+              <button>|&#65513;</button>
+              <button>&#65513;</button>
+              <button>PLAY</button>
+              <button>&#65515;</button>
+              <button>&#65515;|</button>
+            </div>
             <!-- .row -->
         </div>
         <!-- .chessboard -->
-          <p>
+
     </main>
     <!-- .container -->
 </body>
