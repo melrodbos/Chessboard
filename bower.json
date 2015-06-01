@@ -1,0 +1,19 @@
+{
+  "name": "Chessboard",
+  "version": "0.0.0",
+  "homepage": "https://github.com/melrodbos/Chessboard",
+  "authors": [
+    "Melissa Rodríguez <m.rodriguez.bosques@gmail.com>"
+  ],
+  "license": "CC0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "chai": "~2.3.0"
+  }
+}
