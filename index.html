@@ -7,7 +7,6 @@
     <title>TIY Chessboard: Kasparov vs Karpov (1984)</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<<<<<<< HEAD
 
 
     <link rel="stylesheet" href="css/normalize.css">
@@ -33,65 +32,7 @@
 /* For a visual representation of the chessboard:
 1. Create the board: squares, a grid?? Box Model !!!
 2. lets find what the board (.chessboard) and the pieces have in common.*/ -->
-<body>
-  <head>
-     <style>
 
-
-      </style>
-    </head>
-    <div>
-        <main class="chessboard">
-          <style>
-            </style>
-
-                <div class="row rank-4">
-                    <div class="square file-a"></div>
-                    <div class="square file-b"></div>
-                    <div class="square file-c"></div>
-                    <div class="square file-d"></div>
-                    <div class="square file-e"></div>
-                    <div class="square file-f"></div>
-                    <div class="square file-g"></div>
-                    <div class="square file-h"></div>
-                </div>
-                <div class="row rank-3">
-                    <div class="square file-a"></div>
-                    <div class="square file-b"></div>
-                    <div class="square file-c"></div>
-                    <div class="square file-d"></div>
-                    <div class="square file-e"></div>
-                    <div class="square file-f"></div>
-                    <div class="square file-g"></div>
-                    <div class="square file-h"></div>
-                </div>
-                <div class="row rank-2">
-                    <div class="square file-a"></div>
-                    <div class="square file-b"></div>
-                    <div class="square file-c"></div>
-                    <div class="square file-d"></div>
-                    <div class="square file-e"></div>
-                    <div class="square file-f"></div>
-                    <div class="square file-g"></div>
-                    <div class="square file-g"></div>
-                </div>
-                <div class="row rank-1">
-                    <div class="square file-a"></div>
-                    <div class="square file-b"></div>
-                    <div class="square file-c"></div>
-                    <div class="square file-d"></div>
-                    <div class="square file-e"></div>
-                    <div class="square file-f"></div>
-                    <div class="square file-g"></div>
-                    <div class="square file-h"></div>
-                </div>
-                <!-- .row -->
-            </div>
-            <!-- .chessboard -->
-
-        </main>
-        <!-- .container -->
-=======
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
@@ -109,187 +50,7 @@
         <style type="text/css">
             /* CSS HERE! */
 
-            body {
-                background: #EBDEDC;
-            }
 
-            .container {
-                width: 100%;
-                height: 100%;
-                margin: 0 auto;
-                min-width: 512px;
-                max-width: 800px;
-                position:relative;
-            }
-
-            ul.letters_wrap {
-              padding-left: 0;
-              margin:0;
-            }
-
-            li.letters {
-              display: inline-block;
-              font-family: "Lato" Arial sans-serif;
-              font-size:250%;
-              padding: 0 34px;
-            }
-
-            .chessboard {
-              margin: 30px 0;
-              height: 100%;
-            }
-            /* Chessboard square style */
-            .chessboard .square {
-                background-color: #BEDB39;
-                width: 12.5%;
-                padding-bottom: 12.5%;
-                /* outline: 1px solid turquoise; */
-                float: left;
-                display: block;
-                /* position: relative; */
-            }
-
-            .chessboard .square > * {
-              position: absolute;
-            }
-
-  /*           .square span.piece {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: -40px;
-    margin-top: -56px;
-    font-size: 5em;
-  }
-
-  span.piece .light{
-    color: #fff;
-  }
-
-  span.piece .dark{
-    color: #000;
-  }
-   */
-            /* :nth-child pseudo class to alternate square colors */
-            .chessboard .square:nth-child(even) {
-                background-color: #1F8A70;
-            }
-            .chessboard .row:nth-child(even) .square:nth-child(even) {
-                background-color: #BEDB39;
-            }
-
-            .chessboard .row:nth-child(even) .square:nth-child(odd) {
-                background-color: #1F8A70;
-            }
-          /*   .chessboard .row:nth-child(odd) {
-            background-color: #BEDB39;
-          } */
-
-            /* Row Styles */
-            .chessboard .row {
-                margin: 0; padding: 0;
-                position: relative;
-                clear: both;
-            }
-
-            .chessboard .row::before,
-            .chessboard .row::after {
-                font-size: 250%;
-                font-family: "Lato" Arial sans-serif;
-                position: absolute;
-                padding: 20px;
-            }
-
-            .chessboard .row::before {
-                right: 100%;
-            }
-
-            .chessboard .row::after {
-                left: 100%;
-            }
-            .chessboard .rank-8::before,
-            .chessboard .rank-8::after {
-                content: '8';
-                position: absolute;
-            }
-
-            .chessboard .rank-7::before,
-            .chessboard .rank-7::after {
-                content: '7';
-            }
-            .chessboard .rank-6::before,
-            .chessboard .rank-6::after {
-                content: '6';
-            }
-
-            .chessboard .rank-5::before,
-            .chessboard .rank-5::after {
-                content: '5';
-            }
-            .chessboard .rank-4::before,
-            .chessboard .rank-4::after {
-                content: '4';
-                position: absolute;
-            }
-
-            .chessboard .rank-3::before,
-            .chessboard .rank-3::after {
-                content: '3';
-            }
-            .chessboard .rank-2::before,
-            .chessboard .rank-2::after {
-                content: '2';
-            }
-
-            .chessboard .rank-1::before,
-            .chessboard .rank-1::after {
-                content: '1';
-            }
-            /* END Row Styles */
-
-            .piece {
-              font-size: 4.5em;
-              padding-left: 15px;
-            }
-
-            .buttons_wrap {
-              margin: 0 auto;
-              width: 215px;
-              padding-top: 20px;
-            }
-
-            button {
-              display: inline-block;
-              background-color: #BEDB39;
-              border: none;
-              border-radius: 5px;
-              padding: 7px;
-              font-size: 25px;
-            }
-
-            button:hover {
-              background-color: #96B01E;
-            }
-
-            /* @media queries! */
-            @media screen and (max-width: 768px) {
-              .container {
-              max-width: 600px;
-    		      font-size: 50%;
-        	    }
-              li.letters {
-                padding: 0 4.9%;
-              }
-            }
-            @media screen and (max-width: 400px) {
-              .container {
-    		        font-size: 50%;
-        	    }
-              .piece {
-                padding-top: 10px;
-                padding-left: 20px;
-              }
-            }
         </style>
         <div class="chessboard">
             <!-- Top Letters -->
@@ -305,25 +66,25 @@
               <li class="letters">H</li>
             </ul>
             <ul class="row rank-8">
-                <li class="square file-a"><span class="piece">&#9820;</span></li>
-                <li class="square file-b"><span class="piece">&#9822;</span></li>
-                <li class="square file-c"><span class="piece">&#9821;</span></li>
-                <li class="square file-d"><span class="piece">&#9819;</span></li>
-                <li class="square file-e"><span class="piece">&#9818;</span></li>
-                <li class="square file-f"><span class="piece">&#9821;</span></li>
-                <li class="square file-g"><span class="piece">&#9822;</span></li>
-                <li class="square file-h"><span class="piece">&#9820;</span></li>                    <!-- single square -->
+                <li class="square file-a"><span class="piece" id="blackrook">&#9820;</span></li>
+                <li class="square file-b"><span class="piece" id="blackknight">&#9822;</span></li>
+                <li class="square file-c"><span class="piece" id="blackbishop">&#9821;</span></li>
+                <li class="square file-d"><span class="piece" id="blackqueen">&#9819;</span></li>
+                <li class="square file-e"><span class="piece" id="blackking">&#9818;</span></li>
+                <li class="square file-f"><span class="piece" id="blackbishop">&#9821;</span></li>
+                <li class="square file-g"><span class="piece" id="blackknight">&#9822;</span></li>
+                <li class="square file-h"><span class="piece" id="blackrook">&#9820;</span></li>                    <!-- single square -->
             </ul>
             <!-- .row -->
             <ul class="row rank-7">
-                <li class="square file-a"><span class="piece">&#9823;</span></li>
-                <li class="square file-b"><span class="piece">&#9823;</span></li>
-                <li class="square file-c"><span class="piece">&#9823;</span></li>
-                <li class="square file-d"><span class="piece">&#9823;</span></li>
-                <li class="square file-e"><span class="piece">&#9823;</span></li>
-                <li class="square file-f"><span class="piece">&#9823;</span></li>
-                <li class="square file-g"><span class="piece">&#9823;</span></li>
-                <li class="square file-h"><span class="piece">&#9823;</span></li>
+                <li class="square file-a"><span class="piece" id="blackpawn">&#9823;</span></li>
+                <li class="square file-b"><span class="piece" id="blackpawn">&#9823;</span></li>
+                <li class="square file-c"><span class="piece" id="blackpawn">&#9823;</span></li>
+                <li class="square file-d"><span class="piece" id="blackpawn">&#9823;</span></li>
+                <li class="square file-e"><span class="piece" id="blackpawn">&#9823;</span></li>
+                <li class="square file-f"><span class="piece" id="blackpawn">&#9823;</span></li>
+                <li class="square file-g"><span class="piece" id="blackpawn">&#9823;</span></li>
+                <li class="square file-h"><span class="piece" id="blackpawn">&#9823;</span></li>
             </ul>
             <ul class="row rank-5">
                 <li class="square file-a"></li>
@@ -356,24 +117,24 @@
                 <li class="square file-h"></li>
             </ul>
             <ul class="row rank-2">
-                <li class="square file-a"><span class="piece">&#9817;</span></li>
-                <li class="square file-b"><span class="piece">&#9817;</span></li>
-                <li class="square file-c"><span class="piece">&#9817;</span></li>
-                <li class="square file-d"><span class="piece">&#9817;</span></li>
-                <li class="square file-e"><span class="piece">&#9817;</span></li>
-                <li class="square file-f"><span class="piece">&#9817;</span></li>
-                <li class="square file-g"><span class="piece">&#9817;</span></li>
-                <li class="square file-h"><span class="piece">&#9817;</span></li>
+                <li class="square file-a"><span class="piece" id="whitepawn">&#9817;</span></li>
+                <li class="square file-b"><span class="piece" id="whitepawn">&#9817;</span></li>
+                <li class="square file-c"><span class="piece" id="whitepawn">&#9817;</span></li>
+                <li class="square file-d"><span class="piece" id="whitepawn">&#9817;</span></li>
+                <li class="square file-e"><span class="piece" id="whitepawn">&#9817;</span></li>
+                <li class="square file-f"><span class="piece" id="whitepawn">&#9817;</span></li>
+                <li class="square file-g"><span class="piece" id="whitepawn">&#9817;</span></li>
+                <li class="square file-h"><span class="piece" id="whitepawn">&#9817;</span></li>
             </ul>
             <ul class="row rank-1">
-              <li class="square file-a"><span class="piece">&#9814;</span></li>
-              <li class="square file-b"><span class="piece">&#9816;</span></li>
-              <li class="square file-c"><span class="piece">&#9815;</span></li>
-              <li class="square file-d"><span class="piece">&#9813;</span></li>
-              <li class="square file-e"><span class="piece">&#9812;</span></li>
-              <li class="square file-f"><span class="piece">&#9815;</span></li>
-              <li class="square file-g"><span class="piece">&#9816;</span></li>
-              <li class="square file-h"><span class="piece">&#9814;</span></li>
+              <li class="square file-a"><span class="piece" id="whiterook">&#9814;</span></li>
+              <li class="square file-b"><span class="piece" id="whiteknight">&#9816;</span></li>
+              <li class="square file-c"><span class="piece" id="whitebishop">&#9815;</span></li>
+              <li class="square file-d"><span class="piece" id="whitequeen">&#9813;</span></li>
+              <li class="square file-e"><span class="piece" id="whiteking">&#9812;</span></li>
+              <li class="square file-f"><span class="piece" id="whitebishop">&#9815;</span></li>
+              <li class="square file-g"><span class="piece" id="whiterook">&#9816;</span></li>
+              <li class="square file-h"><span class="piece" id="whiterook">&#9814;</span></li>
             </ul>
             <ul class="letters_wrap">
               <li class="letters">A</li>
@@ -386,11 +147,11 @@
               <li class="letters">H</li>
             </ul>
             <div class="buttons_wrap">
-              <button>|&#65513;</button>
-              <button>&#65513;</button>
-              <button>PLAY</button>
-              <button>&#65515;</button>
-              <button>&#65515;|</button>
+              <button class="first">|&#65513;</button>
+              <button class="previous">&#65513;</button>
+              <button class="play">PLAY</button>
+              <button class="next">&#65515;</button>
+              <button class="last">&#65515;|</button>
             </div>
             <!-- .row -->
         </div>
@@ -398,7 +159,7 @@
 
     </main>
     <!-- .container -->
->>>>>>> 15--kasparov-2
+
 </body>
 
 </html>
