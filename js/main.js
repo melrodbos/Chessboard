@@ -25,8 +25,8 @@ $('.play').click(function() {
         $('.rank-' + toRank + ' > .file-' + toFile).addClass(piece);
     }
 
-  };
-})(window);
+  }
+)(window);
 
 
 
