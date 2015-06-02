@@ -1,3 +1,21 @@
+(function(window) {
+
+  var game = [ //list of 5-tuples representing fromRank, fromFile, toRank, toFile. 
+         {
+             fromRank: '.rank-2',
+             fromFile: '.file-d',
+             toRank: '.rank-4',
+             toFile: '.file-d',
+             piece: 'whitepawn',
+         }
+
+     ];
+
+})(window);
+
+
+
+
 //IIFE Immediately Invoked Function Expression)(http://stackoverflow.com/questions/8228281/what-is-the-function-construct-in-javascript)
 //Other references: http://adripofjavascript.com/blog/drips/understanding-the-module-pattern-in-javascript.html
 //http://stackoverflow.com/questions/966225/how-can-i-create-a-two-dimensional-array-in-javascript
@@ -42,8 +60,3 @@
 
 //IFEE to wrap the module:
 // attaching the chess to the scope is a preferrable pattern:
-(function(window){
-  window.chess = {
-    expect(window.chess).to.exist;
-  };
-})(window);
