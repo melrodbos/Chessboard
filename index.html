@@ -8,51 +8,19 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
-
-
-
-
-    <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-
-<!--         /*   Starting point from Thursday's lecture:
- */
-/* Wrapper:
-.container {
-    border: 1px solid;
-    width: 80%;
-    margin: 0 auto;
-}*/
-
-/* For a visual representation of the chessboard:
-1. Create the board: squares, a grid?? Box Model !!!
-2. lets find what the board (.chessboard) and the pieces have in common.*/ -->
-
+    <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-
-    <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-    <!-- Lets start from scratch: Code School based code and from lecture...
- -->
 
 </head>
 
 <body>
     <main class="container">
-        <style type="text/css">
-            /* CSS HERE! */
+        <style type="text/css"></style>
 
-
-        </style>
         <div class="chessboard">
             <!-- Top Letters -->
-
             <ul class="letters_wrap">
               <li class="letters">A</li>
               <li class="letters">B</li>
@@ -71,7 +39,7 @@
               <li class="square file-e"><span class="piece" id="blackking">&#9818;</span></li>
               <li class="square file-f"><span class="piece" id="blackbishop">&#9821;</span></li>
               <li class="square file-g"><span class="piece" id="blackknight">&#9822;</span></li>
-              <li class="square file-h"><span class="piece" id="blackrook">&#9820;</span></li>                    <!-- single square -->
+              <li class="square file-h"><span class="piece" id="blackrook">&#9820;</span></li>                    <!-- single squares -->
             </ul>
             <!-- .row -->
             <ul class="row rank-7">
@@ -84,7 +52,7 @@
               <li class="square file-g"><span class="piece" id="blackpawn">&#9823;</span></li>
               <li class="square file-h"><span class="piece" id="blackpawn">&#9823;</span></li>
             </ul>
-            <ul class="row rank-5">
+            <ul class="row rank-6">
               <li class="square file-a"></li>
               <li class="square file-b"></li>
               <li class="square file-c"></li>
@@ -94,7 +62,7 @@
               <li class="square file-g"></li>
               <li class="square file-h"></li>
             </ul>
-            <ul class="row rank-4">
+            <ul class="row rank-5">
               <li class="square file-a"></li>
               <li class="square file-b"></li>
               <li class="square file-c"></li>
@@ -103,6 +71,16 @@
               <li class="square file-f"></li>
               <li class="square file-g"></li>
                 <li class="square file-h"></li>
+            </ul>
+            <ul class="row rank-4">
+              <li class="square file-a"></li>
+              <li class="square file-b"></li>
+              <li class="square file-c"></li>
+              <li class="square file-d"></li>
+              <li class="square file-e"></li>
+              <li class="square file-f"></li>
+              <li class="square file-g"></li>
+              <li class="square file-h"></li>
             </ul>
             <ul class="row rank-3">
               <li class="square file-a"></li>
@@ -156,99 +134,12 @@
         <!-- .chessboard -->
 
     </main>
+  </body>
     <!-- .container -->
     <script src="js/vendor/jquery-1.11.2.min.js"></script>
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <script src="js/main.js"></script>
-</body>
+    <script src="scripts/model.js"></script>
+
 
 </html>
-
-
-
-
-
-
-
-
-
-
-<!--         /*   Starting point from Thursday's lecture:
- */
-/* Wrapper:
-.container {
-    border: 1px solid;
-    width: 80%;
-    margin: 0 auto;
-}*/
-
-/* For a visual representation of the chessboard:
-1. Create the board: squares, a grid?? Box Model !!!
-2. lets find what the board (.chessboard) and the pieces have in common.*/ -->
-<!-- <body>
- <style>
-    .chessboard {
-      width: 160px; height: 160px;
-      color: darkgrey;
-      margin:1px;
-      display:inline-block;
-      border-style: 1px solid grey;
-
-    }
-
-
-    </style>
-  </head>
-    <div>
-        <main class="chessboard">
-          <style>
-            </style>
-
-                <div class="row rank-4">
-                    <div class="square file-a"></div>
-                    <div class="square file-b"></div>
-                    <div class="square file-c"></div>
-                    <div class="square file-d"></div>
-                    <div class="square file-e"></div>
-                    <div class="square file-f"></div>
-                    <div class="square file-g"></div>
-                    <div class="square file-h"></div>
-                </div>
-                <div class="row rank-3">
-                    <div class="square file-a"></div>
-                    <div class="square file-b"></div>
-                    <div class="square file-c"></div>
-                    <div class="square file-d"></div>
-                    <div class="square file-e"></div>
-                    <div class="square file-f"></div>
-                    <div class="square file-g"></div>
-                    <div class="square file-h"></div>
-                </div>
-                <div class="row rank-2">
-                    <div class="square file-a"></div>
-                    <div class="square file-b"></div>
-                    <div class="square file-c"></div>
-                    <div class="square file-d"></div>
-                    <div class="square file-e"></div>
-                    <div class="square file-f"></div>
-                    <div class="square file-g"></div>
-                    <div class="square file-g"></div>
-                </div>
-                <div class="row rank-1">
-                    <div class="square file-a"></div>
-                    <div class="square file-b"></div>
-                    <div class="square file-c"></div>
-                    <div class="square file-d"></div>
-                    <div class="square file-e"></div>
-                    <div class="square file-f"></div>
-                    <div class="square file-g"></div>
-                    <div class="square file-h"></div>
-                </div>
-                .row
-            </div>
-            .chessboard
-
-        </main>
-        .container
-</body>
- -->
